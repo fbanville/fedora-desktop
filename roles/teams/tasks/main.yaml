@@ -1,0 +1,5 @@
+---
+- name: "install teams flatpak"
+  flatpak:
+    name: com.microsoft.Team
+    state: present

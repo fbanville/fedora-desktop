@@ -1,0 +1,5 @@
+---
+- name: "install plexamp"
+  flatpak:
+    name: com.plexamp.Plexamp
+    state: present

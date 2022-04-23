@@ -1,0 +1,18 @@
+---
+- hosts: localhost
+  connection: local
+  remote_user: root
+  vars:
+    host_name: satori
+#  roles:
+#    - role: jaredhocutt.brave_browser
+
+  tasks:
+    - name: "update hostname"
+      hostname:
+        name: "{{ host_name }}"
+
+  roles:
+    - bitwarden
+    - teams
+    - zoom
