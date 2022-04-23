@@ -1,0 +1,10 @@
+---
+- name: add vscode repo
+  yum_repository:
+    name: vscode
+    description: vscode yum repo
+    baseurl: https://packages.microsoft.com/yumrepos/vscode
+- name: install vscode
+  dnf:
+    name: code
+    state: latest

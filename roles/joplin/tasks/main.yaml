@@ -1,0 +1,5 @@
+---
+- name: "install joplin"
+  flatpak:
+    name: net.cozic.joplin_desktop
+    state: present

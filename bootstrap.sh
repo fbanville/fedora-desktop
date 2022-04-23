@@ -14,8 +14,12 @@ pip3 install --upgrade pip
 pip3 install ansible
 
 echo "[Info ] updating configuration instructions"
-echo "[Info ] lauching ansible and configure desktop"
-ansible-playbook config.yaml
-
+if [ -f "config.yaml" ]; then
+  echo "[Info ] lauching ansible and configure desktop"
+  ansible-playbook config.yaml
+else
+  echo "[Info ] use config.model to create config.yaml and adjust variables."
+  exit 1
+fi
 exit 0
 

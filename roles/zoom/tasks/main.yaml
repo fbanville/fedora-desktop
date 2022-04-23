@@ -1,6 +1,5 @@
-
 ---
-- name: "install zoom flatpak"
+- name: "install zoom"
   flatpak:
     name: com.bitwarden.desktop
     state: present

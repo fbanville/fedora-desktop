@@ -1,5 +1,5 @@
 ---
-- name: "install bitwarden flatpak"
+- name: "install bitwarden"
   flatpak:
     name: com.bitwarden.desktop
     state: present
