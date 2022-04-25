@@ -4,5 +4,12 @@
     name: "{{ item }}"
     state: latest
   loop:
-    - nextcloud-client
-
+    - bat 
+    - fzf 
+    - wl-clipboard 
+    - exa 
+    - fd-find 
+    - procs
+    - sd
+    - ripgrep
+    #    - nextcloud-client
