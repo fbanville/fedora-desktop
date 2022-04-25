@@ -1,4 +1,8 @@
 ---
+- name: add brave key
+  rpm_key:
+    state: present
+    key: https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
 - name: add brave repo
   yum_repository:
     name: brave

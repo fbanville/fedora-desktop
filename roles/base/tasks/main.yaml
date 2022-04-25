@@ -1,0 +1,8 @@
+---
+- name: "installing basic packages"
+  dnf:
+    name: "{{ item }}"
+    state: latest
+  loop:
+    - nextcloud-client
+
