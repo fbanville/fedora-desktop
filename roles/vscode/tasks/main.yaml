@@ -1,4 +1,8 @@
 ---
+- name: add microsoft yum key
+  rpm_key:
+    state: present
+    key: https://packages.microsoft.com/keys/microsoft.asc
 - name: add vscode repo
   yum_repository:
     name: vscode
