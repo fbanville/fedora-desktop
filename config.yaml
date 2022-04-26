@@ -2,14 +2,11 @@
 - hosts: localhost
   connection: local
   remote_user: root
-  vars:
-    host_name: satori
-    expresvpn_version: 2
-
   tasks:
-    #    - name: "update hostname"
-    #hostname:
-    #name: "{{ host_name }}"
+    - include_vars: ../local_vars.yaml
+    - name: "update hostname"
+      hostname:
+        name: "{{ host_name }}"
 
   roles:
     - flathub

@@ -1,5 +1,9 @@
 ---
+- name: "check flathub remote"
+  shell: flatpak remotes | grep flathub
+  register: flathub_remote
+- debug:
+    var: flathub_remote
 - name: "use non filtered flathub repo"
   command: flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub/flatpakrepo
-  when: flathub_not_filtered is not defined
-  register: flathub_not_filtered
+  when: flathub_remote.stdout != "flathub\tsystem"
