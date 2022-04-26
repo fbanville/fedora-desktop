@@ -1,5 +1,5 @@
 ---
-- name "use non filtered flathub repo"
+- name: "use non filtered flathub repo"
   command: flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub/flatpakrepo
   when: flathub_not_filtered.stderr == ""
   register: flathub_not_filtered
